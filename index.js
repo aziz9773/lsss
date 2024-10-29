@@ -13,13 +13,13 @@ client.once("ready", () => {
 
 
 client.on('messageCreate', async message => {
-  if (message.content === '!rules') {
+  if (message.content === '!pol.00') {
     if (message.member.permissions.has("ADMINISTRATOR")) {
       const row = new MessageActionRow()
         .addComponents(
           new MessageSelectMenu()
             .setCustomId('select')
-            .setPlaceholder('قائمة القوانين')
+            .setPlaceholder(' Place Select')
             .addOptions(rules.map(rule => ({
               label: rule.title,
               description: rule.id,
@@ -30,10 +30,10 @@ client.on('messageCreate', async message => {
       const embed = new MessageEmbed()
         .setColor('#f8ca3d')
         .setThumbnail('')
-        .setTitle('قوانين السيرفر')
-        .setDescription('**الرجاء اختيار احد القوانين لقرائته من قائمة الاختيارات تحت**')
-        .setImage('')
-        .setFooter({ text: 'Rules Bot' })
+        .setTitle('LSPD RULES')
+        .setDescription('**جميع القوانين التابعة لقطاع LSPD**')
+        .setImage('https://cdn.discordapp.com/attachments/1267300441872400498/1300913666044071986/lapd_vd-wallpaper-3840x2160.jpg?ex=672291c3&is=67214043&hm=89e0143edd440549fb65442a2f84e3700bd9c90fd52621dbcca3d5e05380442b&')
+        .setFooter({ text: 'LSPD DEPARTMENT' })
         .setTimestamp();
 
       const sentMessage = await message.channel.send({ embeds: [embed], components: [row] });
