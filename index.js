@@ -52,7 +52,7 @@ client.on('interactionCreate', async (interaction) => {
       .setColor('#f8ca3d')
       .setTitle(rule.title)
       .setDescription(text)
-      .setFooter({ text: 'Rules Bot' })
+      .setFooter({ text: 'LSPD Rules' })
       .setTimestamp();
 
     await interaction.reply({ embeds: [ruleEmbed], ephemeral: true });
