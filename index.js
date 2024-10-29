@@ -7,8 +7,8 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 
 client.once("ready", () => {
   console.log(`Bot is Ready! ${client.user.tag}`);
-  console.log(`Code by Wick Studio`);
-  console.log(`discord.gg/wicks`);
+  console.log(``);
+  console.log(``);
 });
 
 
